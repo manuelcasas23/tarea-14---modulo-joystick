@@ -14,6 +14,6 @@ basic.forever(function () {
     0
     ))
     if (!(input.pinIsPressed(TouchPin.P2))) {
-        music.playTone(659, music.beat(BeatFraction.Half))
+        music.playTone(659, music.beat(BeatFraction.Quarter))
     }
 })
