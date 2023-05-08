@@ -1,19 +1,15 @@
+let giro = 0
 basic.forever(function () {
-    basic.clearScreen()
-    led.plot(pins.map(
-    pins.analogReadPin(AnalogPin.P0),
-    0,
-    1023,
-    0,
-    5
-    ), pins.map(
-    pins.analogReadPin(AnalogPin.P1),
-    0,
-    1023,
-    5,
-    0
-    ))
-    if (!(input.pinIsPressed(TouchPin.P2))) {
-        music.playTone(659, music.beat(BeatFraction.Quarter))
+    giro = pins.analogReadPin(AnalogPin.P2)
+})
+basic.forever(function () {
+    if (giro < 400) {
+        maqueen.motorStop(maqueen.Motors.M2)
+        maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 50)
+    } else if (giro > 700) {
+        maqueen.motorStop(maqueen.Motors.M1)
+        maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 50)
+    } else {
+        maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 250)
     }
 })

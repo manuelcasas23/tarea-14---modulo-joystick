@@ -1,10 +1,12 @@
 {
-    "name": "tarea 15 - módulo joystick",
+    "name": "tarea 16 - maqueen + joystick",
     "description": "",
     "dependencies": {
         "core": "*",
         "radio": "*",
-        "microphone": "*"
+        "microphone": "*",
+        "servo": "*",
+        "maqueen": "github:dfrobot/pxt-maqueen#v1.7.2"
     },
     "files": [
         "main.blocks",
