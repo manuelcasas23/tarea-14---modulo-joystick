@@ -1,10 +1,11 @@
 {
-    "name": "tarea 15 - módulo joystick",
+    "name": "tarea 16 - módulo joystick",
     "description": "",
     "dependencies": {
         "core": "*",
         "radio": "*",
-        "microphone": "*"
+        "microphone": "*",
+        "servo": "*"
     },
     "files": [
         "main.blocks",
